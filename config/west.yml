@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: englmaxi
       url-base: https://github.com/englmaxi
+    - name: otherdave
+      url-base: https://github.com/otherdave
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -14,8 +16,8 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
-    - name: zmk-dongle-display
-      remote: englmaxi
+    - name: zmk-led-matrix
+      remote: otherdave
       revision: main
   self:
     path: config
