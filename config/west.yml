@@ -14,8 +14,8 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
-#    - name: zmk-led-matrix
-#      remote: otherdave
-#      revision: main
+    - name: zmk-led-matrix
+      remote: otherdave
+      revision: main
   self:
     path: config
