@@ -1,15 +1,11 @@
 include:
   # Lintilla Dongle (optional)
   - board: seeeduino_xiao_ble
-    shield: davetilla_dongle zmk-neo-widget
+    shield: davetilla_dongle
     snippet: studio-rpc-usb-uart
     artifact-name: lintilla-dongle
+    cmake-args: -DZMK_EXTRA_MODULES=modules/zmk-component-neomatrix
 
-  # Lintilla left can either be a central (no dongle) or peripheral (with dongle)
-  - board: seeeduino_xiao_ble
-    shield: davetilla_left_central rgbled_adapter
-    snippet: studio-rpc-usb-uart
-    artifact-name: lintilla-left-central
   - board: seeeduino_xiao_ble
     shield: lintilla_left_peripheral rgbled_adapter
     artifact-name: lintilla-left-peripheral
