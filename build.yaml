@@ -3,14 +3,14 @@ include:
   - board: seeeduino_xiao_ble
     shield: davetilla_dongle
     snippet: studio-rpc-usb-uart
-    artifact-name: lintilla-dongle
-    cmake-args: -DZMK_EXTRA_MODULES=modules/zmk-component-neomatrix
+    artifact-name: davetilla-dongle
+    cmake-args: -DZMK_EXTRA_MODULES=/tmp/zmk-config/modules/zmk-component-neomatrix
 
   - board: seeeduino_xiao_ble
-    shield: lintilla_left_peripheral rgbled_adapter
-    artifact-name: lintilla-left-peripheral
+    shield: davetilla_left_peripheral rgbled_adapter
+    artifact-name: davetilla-left-peripheral
 
   # Lintilla right will always be a peripheral
   - board: seeeduino_xiao_ble
     shield: davetilla_right_peripheral rgbled_adapter
-    artifact-name: lintilla-right-peripheral
+    artifact-name: davetilla-right-peripheral
