@@ -5,11 +5,11 @@ include:
     snippet: studio-rpc-usb-uart
     artifact-name: davetilla-dongle
 
-  #- board: seeeduino_xiao_ble
-  #  shield: davetilla_left_peripheral rgbled_adapter
-  #  artifact-name: davetilla-left-peripheral
+  - board: seeeduino_xiao_ble
+    shield: davetilla_left_peripheral rgbled_adapter
+    artifact-name: davetilla-left-peripheral
 
   # Lintilla right will always be a peripheral
-  #- board: seeeduino_xiao_ble
-  #  shield: davetilla_right_peripheral rgbled_adapter
-  #  artifact-name: davetilla-right-peripheral
+  - board: seeeduino_xiao_ble
+    shield: davetilla_right_peripheral rgbled_adapter
+    artifact-name: davetilla-right-peripheral
