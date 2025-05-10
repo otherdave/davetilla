@@ -17,6 +17,5 @@ manifest:
     - name: zmk-led-matrix
       remote: otherdave
       revision: main
-      #path: modules/zmk-component-neomatrix
   self:
     path: config
