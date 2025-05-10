@@ -1,0 +1,16 @@
+file_format: "1"
+id: davetilla
+name: Davetilla
+type: shield
+url: https://github.com/otherdave/davetilla
+requires:
+  - xiao_ble
+features:
+  - keys
+  - display
+siblings:
+  - davetilla_left_central
+  - davetilla_left_peripheral
+  - davetilla_right_peripheral
+  - davetilla_dongle
+  - davetilla_macro_right

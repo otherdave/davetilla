@@ -1,0 +1,4 @@
+#include "davetilla.dtsi"
+#include "davetilla_kscan.dtsi"
+
+// vim: expandtab softtabstop=4 shiftwidth=4 filetype=devicetree

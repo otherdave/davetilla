@@ -1,0 +1,14 @@
+config SHIELD_DAVETILLA_LEFT_CENTRAL
+    def_bool $(shields_list_contains,davetilla_left_central)
+
+config SHIELD_DAVETILLA_RIGHT_PERIPHERAL
+    def_bool $(shields_list_contains,davetilla_right_peripheral)
+
+config SHIELD_DAVETILLA_DONGLE
+    def_bool $(shields_list_contains,davetilla_dongle)
+
+config SHIELD_DAVETILLA_LEFT_PERIPHERAL
+    def_bool $(shields_list_contains,davetilla_left_peripheral)
+
+config SHIELD_DAVETILLA_MACRO_RIGHT
+    def_bool $(shields_list_contains,davetilla_macro_right)
