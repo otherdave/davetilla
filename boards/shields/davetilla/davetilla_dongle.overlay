@@ -1,9 +1,11 @@
 #include "davetilla.dtsi"
+#include <dt-bindings/led/led.h>
 
 / {
     chosen {
         zmk,kscan = &mock_kscan;
         zephyr,console = &cdc_acm_uart;
+        zmk,underglow = &led_strip;
     };
 
     mock_kscan: mock_kscan_0 {
@@ -17,12 +19,13 @@
 &pinctrl {
     spi3_default: spi3_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 2)>, <NRF_PSEL(SPIM_SCK, 0, 20)>;
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 2)>;
         };
     };
     spi3_sleep: spi3_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 2)>, <NRF_PSEL(SPIM_SCK, 0, 20)>;
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 2)>;
+            low-power-enable;
         };
     };
 };
@@ -34,14 +37,16 @@
     pinctrl-1 = <&spi3_sleep>;
     pinctrl-names = "default", "sleep";
 
-    ws2812: ws2812@0 {
+    led_strip: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";
         reg = <0>;
         spi-max-frequency = <2000000>;  
-        chain-length = <7>;
-        color-mapping = <1 2 0>;        
-        spi-one-frame = <0xF0>;         
-        spi-zero-frame = <0x80>;        
+        chain-length = <60>;
+        spi-one-frame = <0x70>;         
+        spi-zero-frame = <0x40>;        
+        color-mapping = <LED_COLOR_ID_GREEN
+                         LED_COLOR_ID_RED
+                         LED_COLOR_ID_BLUE>;
     };
 };
 
